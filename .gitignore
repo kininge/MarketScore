@@ -1,19 +1,18 @@
-.DS_Store
+# node artifact files
+node_modules/
+dist/
 
-# Images
-images/avatars/
-images/captchas/
-images/smileys/
-images/member_photos/
-images/signature_attachments/
-images/pm_attachments/
+# log files
+*.log
 
-# For security do not publish the following files
-system/expressionengine/config/database.php
-system/expressionengine/config/config.php
+# support files
+*.env
+*.lock
 
-# Caches
-sized/
-thumbs/
-_thumbs/
-*/expressionengine/cache/*
+# large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
