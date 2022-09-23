@@ -9,6 +9,7 @@ const loggingFromat = printf(
 	(log) => `${log.level.toUpperCase()} :: ${log.timestamp} : ${log.message}`
 );
 
+// object of logger and structure of log
 const loggerRegister: Logger = createLogger({
 	format: combine(
 		timestamp({ format: "DD MMM YYYY, HH:mm:ss" }),
@@ -23,6 +24,7 @@ const loggerRegister: Logger = createLogger({
 	],
 });
 
+// function that log and send error emails
 const logger = (level: "error" | "info", message: String) => {
 	if (level === "error") {
 		// feedback to author
