@@ -1,5 +1,6 @@
 /** @format */
 
+import mailService from "./mail.service";
 import { createLogger, format, transports, Logger } from "winston";
 
 const { combine, timestamp, json, printf, prettyPrint, splat } = format;
@@ -27,7 +28,7 @@ const loggerRegister: Logger = createLogger({
 // function that log and send error emails
 const logger = (level: "error" | "info", message: String) => {
 	if (level === "error") {
-		// feedback to author
+		mailService("Error massage from Marcket Services",message);	
 	}
 
 	// log
